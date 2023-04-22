@@ -1,7 +1,7 @@
 package com.example.oauthservice.config;
 
-import cn.les.oauth2auth.domain.ResultCode;
-import cn.les.oauth2auth.domain.ResultJson;
+import com.example.oauthservice.domain.ResultCode;
+import com.example.oauthservice.domain.ResultJson;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.security.core.Authentication;
