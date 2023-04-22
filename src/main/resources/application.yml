@@ -1,0 +1,39 @@
+server:
+  port: 9092
+
+spring:
+  application:
+    name: oauth-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/demo?databaseTerm=SCHEMA&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useAffectedRows=true&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    driverClassName: com.mysql.cj.jdbc.Driver
+    hikari:
+      max-lifetime: 120000
+  jpa:
+    hibernate:
+      ddl-auto: update
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+  redis:
+    host: localhost
+    port: 6381
+    password: 123456
+    timeout: 3000
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        username: nacos
+        password: nacos
+    gateway:
+      discovery:
+        locator:
+          enabled: true # gateway ??? nacos ?????
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
